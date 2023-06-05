@@ -21,6 +21,7 @@
       addTen('bob'); // returns false
 
      */
+
     function addTen(input) {
     //     if (!isNaN(input)) {
     //         return parseInt(input + 10)
@@ -40,7 +41,39 @@
 
     console.log(addTen('0'))
 
+  /*  ================================= WARM UP
 
+    /* TODO
+
+    Write a function, makeUpperCase, that takes in an input and returns the input in uppercase if it is a string.
+    If the input is not a string, return false.
+
+    Examples:
+
+    makeUpperCase('cat') // returns 'CAT'
+    makeUpperCase('DoG') // returns 'DOG'
+    makeUpperCase('CODEUP') // returns 'CODEUP'
+    makeUpperCase(54) // returns false
+    makeUpperCase(true) // returns false
+    makeUpperCase(null) // returns false
+
+    */
+
+    function makeUpperCase(input) {
+        if (typeof (input) === "string") {
+            return input.toUpperCase();
+        } else {
+            return false;
+        }
+    }
+
+
+    console.log(makeUpperCase('cat'));
+    console.log(makeUpperCase(54));
+    console.log(makeUpperCase('DoG'));
+    console.log(makeUpperCase('CODEUP'));
+    console.log(makeUpperCase(true));
+    console.log(makeUpperCase(null));
 
 
 </script>
