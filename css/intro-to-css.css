@@ -1,0 +1,15 @@
+header{
+    background-color:lightgrey;
+    padding: 10px;
+}
+/*.menu-item*/
+/*li{*/
+/*    display: inline-block;*/
+/*}*/
+#navigation {
+    border: 1px solid red;
+}
+#navigation li{
+    display: inline-block;
+
+}
