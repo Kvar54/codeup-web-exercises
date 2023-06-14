@@ -8,13 +8,13 @@ let arr =[1, 2, 3, 4, 5];
      */
     const names = ["Maliqui", "Tom", "Mel", "Jasmin"];
 
-    console.log(names);
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-
+console.log(names);
 
     /**
      * TODO:
@@ -43,6 +43,15 @@ let arr =[1, 2, 3, 4, 5];
      */
     names.forEach((name) => {
         console.log(name);
+    });
+    //   names.forEach((name) => {
+    //     console.log(name);
+    //   });
+
+    names.forEach((element) => {
+      if (element === "Isaac") {
+        console.log("hi isaac");
+      }
     });
     /**
      * TODO:

@@ -1,11 +1,15 @@
 .fancy-header{
     color:purple;
 }
+h1{
+    text-align: center;
+}
 h2{
     text-transform: uppercase;
 }
-#hero h2{
-    text-transform: lowercase;
+#vision h2{
+    color: blue;
+    text-decoration: underline;
 }
 #hero{
     background-color: bisque;

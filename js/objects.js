@@ -53,11 +53,23 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-function hebDiscountString(shopper){
-    let name = shopper.name;
-    let amount = (shopper.amount).toFix(2);
-    let discount= (shopper)
+    function hebDiscountString(shopper) {
+        let name = shopper.name;
+        let amount = (shopper.amount).toFixed(2);
+        let discount = (shopper.amount * 0.12).toFixed(2);
+        let discountedAmount = (shopper.amount * 0.88).toFixed(2)
+        let message = "";
+        if (shopper.amount > 200) {
+            message = message + `${name} spent $${amount}.`;
+            message += `you received a discount! You saved: $${discount}`;
+            message += `Your total is now: $${discountedAmount}`;
+            return message;
+
+        } else {
+            return (`${name} spent $${amount}.You did not receive a discount.You saved nothing: your total remains: $${amount}`);
+        }
     }
+
     const shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
@@ -65,16 +77,15 @@ function hebDiscountString(shopper){
     ];
 
 
-shoppers.forEach((shopper)=>{
-    // console.log(`${shopper.name} spent ${shopper.amount}.${shopper.amount > 200 ? shopper.amount * 0.88 : shopper.amount}`)
-if(shopper.amount > 200){
-    console.log((`${shopper.amount} spent $${shopper.amount.toFixed(2)}. oyu got the discount! you just saved: $${(shopper.amount * 0.12).toFixed(2)}.your newtotal is: $${discount}.`))
-}
+    shoppers.forEach((shopper) => {
+        // console.log(`${shopper.name} spent ${shopper.amount}.${shopper.amount > 200 ? shopper.amount * 0.88 : shopper.amount}`)
+// if(shopper.amount > 200){
+        // console.log((`${shopper.amount} spent $${shopper.amount.toFixed(2)}. you got the discount! you just saved: $${(shopper.amount * 0.12).toFixed(2)}.your newtotal is: $${discount}.`))
+// }
+        console.log(hebDiscountString(shopper));
 
 
-
-
-})
+    })
 // name, amount, discount, amount after discount
 
 
@@ -91,14 +102,24 @@ if(shopper.amount > 200){
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
- const books = [
-    {title: 'The Salmon of Doubt', author: "Douglas Adams"},
-        {title:"Walkaway", author:{firstName:"Cory", lastName: "Doctorow"}},
-        {title:"A Brief History of Time", author:{firstName:"Stephen", lastName: "Hawking"}},
-        {title:"In Cold Blood", author:{firstName:"Truman", lastName: "Capote"}},
-        {title:"The Mockingbird", author:{firstName:"Harper", lastName: "Lee Miller"}}
+    const book = [
+        {
+            title: 'Unbought and Unbossed',
+            author: {
+                firstName: "Shirley",
+                lastName: "Chisholm"
+            }
 
-];
+        },
+        {title: "Ficciones", author: {firstName: "Jorge", lastName: "Borges"}},
+        {title: "The Body Keeps The Score", author: {firstName: "Bessel", lastName: "Kolk"}},
+        {title: "In Cold Blood", author: {firstName: "Truman", lastName: "Capote"}},
+        {title: "A Gentle Reminder", author: {firstName: "Bianca", lastName: "Sparacino"}}
+
+    ];
+    console.log(books);
+
+
     console.log(books[0].author.lastName);
 
 
@@ -135,7 +156,14 @@ if(shopper.amount > 200){
        if(index < books.length -1)
            console.log("---");
    })
-
+    for (let book = 0; book < books.length ; book++){
+        console.log("")
+        console.log(book + 1)
+        console.log(books[book].title)
+        console.log(books[book].author.firstName)
+        console.log(books[book].author.lastName)
+        console.log("")
+    }
 
 
 
@@ -150,17 +178,28 @@ if(shopper.amount > 200){
      *   `showBookInfo` function.
      */
 
-   function createBook(title, authorFirstName, authorLastName){
-       return{
-           title: title
-           author:{
-               firstName: authorFirstName,
-               lastName: authorLastName}
+    function createBook(title, authorFirstName, authorLastName) {
+        return {
+            title: title, author: {
+                firstName: authorFirstName, lastName: authorLastName
+            }
 
-           };
-       }
-     let books =
+        };
+    }
 
-    books.push(createBook("in cold blood", "truman", "capote"))
+    let books = createBook("Unbought and Unbossed", "Shirley", "Chisholm");
+    createBook("Ficciones", "Jorge", "Borges");
+    createBook("The Body Keeps The Score", "Bessel", "Kolk");
+    createBook("In Cold Blood", "Truman", "Capote");
+    createBook("A Gentle Reminder", "Bianca", "Sparacino")
+
+    books.push(createBook("in cold blood", "truman", "capote"));
+
+    function showBookInfo(book) {
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+    }
+
+    showBookInfo(books[2]);
 
 })();

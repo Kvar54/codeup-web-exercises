@@ -1,3 +1,7 @@
+function isValid(num) {
+    return num <= 0 || num >= 51 || num % 2 === 0
+}
+console.log("Inside break_and_continue.js");
 console.log("Inside break_and_continue.js");
 
 //  2.Prompt the user for an odd number between 1 and 50. Use a loop and a break
@@ -49,8 +53,8 @@ let userNumber = promptBetweenONeAndFiftyOdd(){
 
 
 for (let i = 1; i <= 50; i += 2) {
-    if(i == userNumber) {
-        console.log(`Yikes! Skipping over: ${userNumber}`);
+    if(i === userNumber) {
+        console.log(`Oh No, it's Skipping over: ${userNumber}!`);
         continue;
     }
     console.log(`There is an odd number: ${i}.`);
