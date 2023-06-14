@@ -1,5 +1,5 @@
 .fancy-header{
-    color:purple;
+    color:black;
 }
 h1{
     text-align: center;
@@ -7,17 +7,24 @@ h1{
 h2{
     text-transform: uppercase;
 }
-#vision h2{
-    color: blue;
+.nice-header{
+    color: #010a0a;
     text-decoration: underline;
 }
-#hero{
-    background-color: bisque;
+
+body {
+    background-color: teal;
+    background-image: url("../images/tech.jpeg");
+    background-size: contain;
+
 }
+
 .section-border{
     background-color: unset;
     border-bottom: 1px solid #000;
+    padding: 10px;
 }
 section{
-    background-color: #eee;
+    background-color: rgba(240, 248, 255, 0.4);
+
 }
