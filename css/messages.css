@@ -13,16 +13,16 @@ padding:.5rem;
     border-radius: 5px;
 }
 .message-info{
-   background-color: ;
+   background-color:#CDDDFF ;
 }
 
 .message-success{
-    background-color: ;
+    background-color:#CFF3DA ;
 }
 
 .message-warning{
-    background-color: ;
+    background-color:#FCFBC9;
 }
 .message-error{
-    background-color: ;
+    background-color:#FAD2D6 ;
 }
