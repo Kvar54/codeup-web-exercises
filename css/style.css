@@ -13,9 +13,10 @@ h2{
 }
 
 body {
-    background-color: teal;
+    background-color: lightgray;
     background-image: url("../images/tech.jpeg");
     background-size: contain;
+    background-blend-mode: soft-light;
 
 }
 
