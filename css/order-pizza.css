@@ -68,3 +68,15 @@ a.nav-link-order-online{
 a.btn.btn-sm{
     color:grey;
 }
+.card-header {
+    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    margin-bottom: 0;
+    color: var(--bs-card-cap-color);
+    background-color: #0D6EFD;
+    border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+.card-header.nest{
+    background-color: #F7F7F7;
+}
+
+
