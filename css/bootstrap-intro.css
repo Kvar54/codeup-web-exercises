@@ -53,9 +53,11 @@ body {
     background-color: black;
 }
 .nav-item-button1:hover{
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 4px;
+    padding: 4px;
     background-color: #0D6EFD;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .nav-item-button2{
@@ -64,8 +66,8 @@ border:none;
 
 }
 .nav-item-button2:hover {
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 4px;
+    padding: 4px;
 background-color: #0D6EFD;
 }
 .nav-item-button3{
@@ -74,8 +76,8 @@ border:none;
 
 }
 .nav-item-button3:hover{
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 4px;
+    padding: 2px;
     background-color: #0D6EFD;
 
 }
@@ -85,8 +87,8 @@ border:none;
 
 }
 .nav-item-button4:hover{
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 4px;
+    padding: 4px;
     background-color: #0D6EFD;
 }
 
@@ -95,8 +97,8 @@ border:none;
     background-color: black;
 }
 .nav-item-btn3:hover{
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 4px;
+    padding: 4px;
     background-color: #0D6EFD;
 }
 .nav-link-hover{
@@ -108,4 +110,14 @@ text-decoration: none;
     font-size: 1.6rem!important;
     font-style: oblique;
     font-family: "Euphemia UCAS";
+    color: #B9B9B9;
+
 }
+a.btn-link{
+   text-decoration: none;
+    background-color: #3E87FE;
+    color: white;
+    border-
+}
+
+
