@@ -10,3 +10,102 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    align-items: center;
+}
+.col-md-5 img{
+    opacity:0.5;
+}
+/*.h2, h2 {*/
+/*    font-size: calc(1.325rem + .9vw);*/
+/*    margin-left: 20px;*/
+/*}*/
+/*.lead {*/
+/*    font-size: 1.25rem;*/
+/*    font-weight: 300;*/
+/*    margin-left: 20px;*/
+/*}*/
+/*    .col-md-5 {*/
+/*        flex: auto;*/
+/*        width: 6.666667%;*/
+/*        margin-left: 178px;*/
+/*    }*/
+.row {
+    --bs-gutter-x: -13.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    align-items: center;
+}
+.h2, h2 {
+    font-size: calc(2.325rem + -0.1vw);
+}
+.nav-item-button1{
+    border:none;
+    background-color: black;
+}
+.nav-item-button1:hover{
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #0D6EFD;
+}
+
+.nav-item-button2{
+border:none;
+    background-color: black;
+
+}
+.nav-item-button2:hover {
+    border-radius: 8px;
+    padding: 8px;
+background-color: #0D6EFD;
+}
+.nav-item-button3{
+border:none;
+    background-color: black;
+
+}
+.nav-item-button3:hover{
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #0D6EFD;
+
+}
+.nav-item-button4{
+    border:none;
+    background-color: black;
+
+}
+.nav-item-button4:hover{
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #0D6EFD;
+}
+
+.nav-item-btn3{
+    border:none;
+    background-color: black;
+}
+.nav-item-btn3:hover{
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #0D6EFD;
+}
+.nav-link-hover{
+
+text-decoration: none;
+    color: white;
+}
+.fs-4 {
+    font-size: 1.6rem!important;
+    font-style: oblique;
+    font-family: "Euphemia UCAS";
+}
