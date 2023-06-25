@@ -113,11 +113,73 @@ text-decoration: none;
     color: #B9B9B9;
 
 }
-a.btn-link{
-   text-decoration: none;
-    background-color: #3E87FE;
-    color: white;
-    border-
+.btn-lnk{
+       all: unset;
+       width: 100px;
+       height: 30px;
+       font-size: 20px;
+    font-family: "Bangla MN";
+       background: transparent;
+       border: none;
+       position: relative;
+       color: #f0f0f0;
+       cursor: pointer;
+       z-index: 1;
+       padding: 10px 124px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       white-space: nowrap;
+       user-select: none;
+       -webkit-user-select: none;
+       touch-action: manipulation;
+   }
+
+.btn-lnk::after,
+.btn-lnk::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
 }
+
+.btn-lnk::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+}
+
+.btn-lnk::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+
+.btn-lnk:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+}
+
+.btn-lnk:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.btn-lnk:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+
 
 
