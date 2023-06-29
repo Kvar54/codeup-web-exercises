@@ -161,6 +161,175 @@
     console.log(returnProduct([4, 0, 2])) // returns 4 * 0 * 2 = 0
     console.log(returnProduct([5, 3, 2])) // returns 5 * 3 * 2 = 30
 
+
+    // Create a function, returnTotalSales, that takes in an array of sales data objects and returns the sum of all
+    // totalItemsSold properties. Assume all elements in the input array are valid sales data objects with a totalItemsSold
+    // property.
+    const salesData = [
+        {
+            month: 'January',
+            totalItemsSold: 0
+        },
+        {
+            month: 'February',
+            totalItemsSold: 5
+        },
+        {
+            month: 'March',
+            totalItemsSold: 2
+        },
+        {
+            month: 'April',
+            totalItemsSold: 10
+        },
+        {
+            month: 'May',
+            totalItemsSold: 30
+        }
+    ];
+
+        function returnTotalSales(sales) {
+            const total = salesData[0].totalItemsSold +
+                salesData[1].totalItemsSold +
+                salesData[2].totalItemsSold +
+                salesData[3].totalItemsSold +
+                salesData[4].totalItemsSold;
+            return total;
+        }
+
+          console.log(returnTotalSales(salesData)); // returns 47
+//
+// for loop way of doing it
+// let sum = 0;
+// for(let i = 0; i < salesData.length; i += 1){
+//     sum += salesData[i].totalItemsSold;
+//     }
+
+//     for each loop way of doing it
+// salesData.forEach(element => {
+//     sum += element.totalItemsSold;
+//     });
+
+
+//     Create a function, returnAvgSales, that takes in an array of sales data objects and returns the average of all
+//     total items sold. Assume all elements in the input array are valid sales data objects with a totalItemsSold
+//     property. If the array is empty, return 0. If the array has one element, return the value of the totalItemsSold.
+
+    function returnAvgSales(salesData){
+        if (salesData.length === 0) return 0;
+        if (salesData.length === 1) return salesData[0].totalItemsSold;
+        const total = salesData[0].totalItemsSold +
+            salesData[1].totalItemsSold +
+            salesData[2].totalItemsSold +
+            salesData[3].totalItemsSold +
+            salesData[4].totalItemsSold;
+return total/salesData.length;
+    }
+
+    console.log(returnAvgSales(salesData));
+
+
+    // Create a function, returnAdmins, that takes in an array of user objects
+    // and returns an array of only the admin user objects. Assume the array
+    // has at least one user object and all elements have an isAdmin property.
+    //
+
+        const users=[
+            {
+            username: 'fred123',
+            password: 'letmein',
+            email: 'fred123@email.com',
+            isAdmin: true
+        },
+        {
+            username: 'cindy123',
+            password: 'hello123',
+            email: 'cindy123@email.com',
+            isAdmin: false
+        },
+        {
+            username: 'kathy123',
+            password: 'letmein',
+            email: 'kathy123@email.com',
+            isAdmin: true
+        },
+        {
+            username: 'kyle123',
+            password: 'letmein',
+            email: 'kyle123@email.com',
+            isAdmin: false
+        }
+    ];
+    function returnAdmins(users) {
+        const admins = [];
+        for (let i = 0; i < users.length; i += 1) {
+            if (users[i].isAdmin) ;
+            {
+                admins.push(users[i]);
+            }
+        }
+        return admins;
+
+    }
+
+    // Write a function that takes a neighborhood object and determines if it is desirable. A neighborhood is desirable.
+    // If the median home price is less than 300000, crime rates are low, and the total rating of schools is at least 24.
+    // The function should return true if the neighborhood object is desireable and false otherwise.
+    // example data...
+function isDesirableNeighborhood(neighborhood) {
+        if (neighborhood.medianHomePrice < 300_000 && neighborhood.crimeRate === "low" && neighborhood.schools >= 24){
+    return true;
+    } else {
+ return false;
+    }
+}
+    // underscore adds a comma for large numbers
+    // function isDesirableNeighborhood(neighborhood){
+    //     const isRightPrice = neighborhood.medianHomePrice < 300000;
+    //     const isRightCrimeRate= neighborhood.crimeRate === "low";
+    //     const isRightSchools= neighborhood.schools >= 24;
+    //     const isDesirableNeighborhood = isRightCrimeRate && isRightSchools && isRightPrice;
+    // }
+
+         const neighborhood1 = {
+             neighborhood: "Lovely Estates",
+             medianHomePrice: 280000,
+             pool: true,
+             tennis: false,
+             crimeRate: "low",
+             schools: 22
+         };
+
+    const neighborhood2 = {
+        neighborhood: "Luminous Estates",
+        medianHomePrice: 270000,
+        pool: true,
+        tennis: false,
+        crimeRate: "high",
+        schools: 24
+    }
+
+    const neighborhood3 = {
+        neighborhood: "Oak Mountain",
+        medianHomePrice: 290000,
+        pool: false,
+        tennis: false,
+        crimeRate: "low",
+        schools: 24
+    }
+
+    const neighborhood4 = {
+        neighborhood: "Ginormous Acres",
+        medianHomePrice: 350000,
+        pool: true,
+        tennis: true,
+        crimeRate: "low",
+        schools: 27
+    }
+
+console.log(isDesirableNeighborhood(neighborhood1));
+
+
 </script>
 
 </body>
