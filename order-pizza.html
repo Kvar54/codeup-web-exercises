@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -35,7 +35,7 @@
         </div>
         <form class="form-inline my-23 my-md-0 gap-10">
             <input class="form-control-Q" type="text" placeholder="Search stores near you!"
-                   aria-label="Search-store-near-you"
+                   aria-label="Search-store-near-you">
         </form>
     </div>
     <div class="column">
@@ -114,46 +114,117 @@
                                                                    name="flexRadioDefaultlarge"
                                                                    id="flexRadioDefaultlarge">
                                     <label class="form-check-label-large" for="flexRadioDefaultlarge">Large (14")</li>
+                            </ul>
+
                         </div>
                         <div class="card-footer text-end">
-                            <a href="#" class="btn btn-primary">Next Step ></a>
+                            <a href="#" class="btn btn-primary">Next Step </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
             <div class="tab-pane fade" id="Cheese-and-Sauce-tab-pane" role="tabpanel"
                  aria-labelledby="Cheese-and-Sauce-tab"
                  tabindex="0">
-                <div class="card-text-start">
+                <div class="card text-start-container-fluid d-grid gap-2">
                     <div class="card-header">
                         <span style="color:white">Choose Cheese and Sauce</span>
                     </div>
                     <div class="card-body d-flex flex-column gap-3">
-                    <div class="card" style="width:100%";>
-                        <div class="card-header nest">
-                            Cheese
+                        <div class="card" style="width: 100%; ">
+                            <div class="card-header nest">
+                               Cheese
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">How Much?</li>
+                                   <select aria-label="Default select example">
+                                        <option selected>Normal</option>
+                                        <option value="1">Extra</option>
+                                        <option value="3">Light</option>
+                                    </select>
+                            </ul>
                         </div>
-                        <ul class="list-group-items">
-                            <li class="list-group-item">How Much?</li>
+                        <div class="card" style="width: 100%; ">
+                            <div class="card-header nest">
+                                Sauce
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">What Type?</li>
+                                <select aria-label="Default select example">
+                                    <option selected>Tomato</option>
+                                    <option value="1">Cheese</option>
+                                    <option value="3">barbeque</option>
+                                </select>
 
+                                <li class="list-group-item">How Much?</li>
+                                <select aria-label="Default select example">
+                                    <option selected>Normal</option>
+                                    <option value="1">Extra</option>
+                                    <option value="3">Light</option>
+                                </select>
+                            </ul>
 
-                        </ul>
+                        </div>
+                        <div class="card-footer text-end">
+                           <a href="#" class="btn btn-primary"> < Previous </a> <a href="#" class="btn btn-primary">Next Step > </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-
-
-
-
-
-
-
-
+            </ul>
+            </div>
 
 
             <div class="tab-pane fade" id="Toppings-pane" role="tabpanel" aria-labelledby="Toppings-tab" tabindex="0">
-                <h2> I am the Toppings tab</h2>
             </div>
+        <div class="card-body d-flex flex-column gap-3">
+            <div class="card" style="width: 100%; ">
+                <div class="card-header nest">
+                    Hand Tossed
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                    <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                       name="flexRadioDefaultsmall"
+                                                       id="flexRadioDefaultsmall">
+                        <label class="form-check-label" for="flexRadioDefaultsmall">Small (10")</li>
+                    <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                       name="flexRadioDefaultmedium"
+                                                       id="flexRadioDefaultmedium">
+                        <label class="form-check-label" for="flexRadioDefaultmedium">Medium (12")</li>
+                </ul>
+            </div>
+            <div class="card" style="width: 100%; ">
+                <div class="card-header nest">
+                    Crispy Thin
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                    <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                       name="flexRadioDefault-medium-thin"
+                                                       id="flexRadioDefault-medium-thin">
+                        <label class="form-check-label" for="flexRadioDefault-medium-thin">Medium (12")</li>
+                    <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                       name="flexRadioDefaultlarge"
+                                                       id="flexRadioDefaultlarge">
+                        <label class="form-check-label-large" for="flexRadioDefaultlarge">Large (14")</li>
+                </ul>
+
+            </div>
+            <div class="card-footer text-end">
+                <a href="#" class="btn btn-primary">Next Step </a>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
     </div>
