@@ -78,5 +78,7 @@ a.btn.btn-sm{
 .card-header.nest{
     background-color: #F7F7F7;
 }
-
+.fade:not(.show) {
+     opacity: unset;
+}
 
