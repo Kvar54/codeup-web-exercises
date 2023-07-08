@@ -1,0 +1,6 @@
+.bg-image {
+   background-image: url("../Img/gmby.png");
+   background-color:red;
+   background-size: cover;
+   background-position: center;
+}

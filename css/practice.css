@@ -1,4 +1,22 @@
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+header{
+    background-color: #E1DBC5;
+}
+
+.bg-body-tertiary-hero {
+    background-color:#E1DBC5;
+}
+hr{
+    width: 95%;
+}
 
 nav.navbar{
 
@@ -16,7 +34,7 @@ nav.navbar{
     --bs-nav-link-padding-x: 0;
     --bs-nav-link-padding-y: 0.5rem;
     --bs-nav-link-font-weight: ;
-     --bs-nav-link-hover-color: red;
+    --bs-nav-link-hover-color: red;
     display: flex;
     flex-direction: column;
     padding-left: 0;
@@ -55,7 +73,7 @@ button {
 .btun-outline-success-hero {
     color:#D10D8C;
     border-color: #D10D8C;
-border-radius: 8px;
+    border-radius: 8px;
 }
 #btun-nav:hover,:focus {
     color: #ffffff;
@@ -323,66 +341,259 @@ body {
 .page-wrapper{
     min-height: 100vh;
     background-image: url("/Img/cyber.gif");
-    background-size:cover;
+    background-size: contain;
 }
-/*body{*/
-/*    background-color: red !important;*/
-/*}*/
-/*hr.hero-hr {*/
-/*    color: inherit;*/
-/*    border: none;*/
-/*    width: 100%;*/
-/*    height: 2px;*/
-/*    border-top: 0.3rem dotted yellow;*/
+form.d-flex select{
+    margin: 10px;
+    font-family:Orbitron,sans-serif;
+}
+::placeholder {
+    color: #F3FD31;
+}
+
+input#coffee-name {
+    box-shadow: 0 0 2em 0.2em #F3FD31;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: 1px solid #61EFFFFF;
+    padding: 0 17px;
+    border-radius: 0px;
+    margin-right:-1px;
+}
+input#coffee-name:focus {
+    text-shadow: unset;
+}
+input[type="submit"] {
+    box-shadow: 0 0 2em 0.2em #F3FD31;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: 1px solid #61EFFFFF;
+    padding: 0 12px;
+    border-radius: 0px 999px 999px 0px;
+}
+select#roast-selection {
+    box-shadow: 0 0 2em 0.2em #F3FD31;
+    background-color: transparent;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: -1px;
+    border: 1px solid #61EFFFFF;
+    padding: 0 9px;
+    border-radius: 999px 0px 0px 999px;
+}
+.glowing-txt-coffee {
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+}
+.card.coffee{
+    background-color: rgba(102, 51, 153, 0.37);
+    background-blend-mode: multiply;
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(img/cyberpunk-border.png) 30 round;
+    position: relative;
+}
+
+img.card-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 127%;
+    height: 140%;
+    animation: colorchange 5s;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+}
+
+@keyframes colorchange {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+p.card-text.relative {
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif !important;
+}
+.card-title {
+    margin-bottom: var(--bs-card-title-spacer-y);
+    color: white !important;
+    text-align: center;
+}
+img.avatar {
+    width: 50%;
+    position: relative;
+    top: -1px;
+}
+body {
+    background-color: #6e6565;
+    padding: 0;
+}
+
+
+.bubble {
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
+    font-size: 16px;
+    line-height: 1.3em;
+    background-color: #fff;
+    color: #000;
+    padding: 12px;
+    box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    left: 407px;
+    top: 178px;
+}
+
+.bubble::after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+}
+.bubble.shadow {
+    box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000, 4px 12px rgba(0, 0, 0, 0.1), 12px 4px rgba(0, 0, 0, 0.1), 8px 8px rgba(0, 0, 0, 0.1);
+}
+.bubble.mini {
+    width: 110px;
+    font-size: 16px;
+    padding: 4px;
+    font-family: monospace;
+}
+.bubble.medium {
+    width: 350px;
+}
+.bubble.large {
+    width: 560px;
+    font-size: 24px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.bubble.grow {
+    width: 62%;
+}
+.bubble.top::after {
+    height: 4px;
+    width: 4px;
+    top: -8px;
+    left: 32px;
+    box-shadow: 0 -4px #000, 0 -8px #000, 0 -12px #000, 0 -16px #000, -4px -12px #000, -8px -8px #000, -12px -4px #000, -4px -4px #fff, -8px -4px #fff, -4px -8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+}
+.bubble.right::after {
+    height: 4px;
+    width: 4px;
+    top: 84px;
+    right: -8px;
+    background: white;
+    box-shadow: 4px -4px #fff, 4px 0 #fff, 8px 0 #fff, 0 -8px #fff, 4px 4px #000, 8px 4px #000, 12px 4px #000, 16px 4px #000, 12px 0 #000, 8px -4px #000, 4px -8px #000, 0 -4px #fff;
+}
+.bubble.bottom::after {
+    height: 4px;
+    width: 4px;
+    bottom: -8px;
+    left: 32px;
+    box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+}
+.bubble.left::after {
+    height: 7px;
+    width: 12px;
+    top: 198px;
+    left: -8px;
+    background: white;
+    box-shadow: -4px -4px #fff, -4px 0 #fff, -8px 0 #fff, 0 -8px #fff, -4px 4px #000, -8px 4px #000, -12px 4px #000, -16px 4px #000, -12px 0 #000, -8px -4px #000, -4px -8px #000, 0 -4px #fff;
+}
+.row {
+    --bs-gutter-x: -3.5rem;
+    --bs-gutter-y: 16;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: auto;
+    margin-right: calc(-.5 * var(--bs-gutter-x))7;
+    margin-left: calc(-.0 * var(--bs-gutter-x));
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.typewriter {
+    display: inline-block;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* position: absolute; */
+    /* overflow: hidden; */
+    white-space: initial;
+    /* margin: 0 auto; */
+    letter-spacing: .15em;
+    /* animation-fill-mode: both; */
+    /* animation: typing 3.5s steps(40) forwards, blink-caret .75s step-end infinite; */
+    width: 100%;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0; /* Start with zero width */
+    }
+    to {
+        width: 100%; /* Expand to full width */
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+/*.bubble {*/
+/*    font-size: 14px; !* Adjust the font size as needed *!*/
+/*    overflow-wrap: break-word;*/
+/*    width: auto; !* Remove fixed width *!*/
+/*    max-width: 100%;*/
 /*    position: relative;*/
-/*    overflow: visible;*/
-/*    margin: 2rem 0;*/
-/*    background-color: black;*/
+/*    display: inline-block;*/
+/*    padding: 10px;*/
+/*    background-color: #fff;*/
+/*    color: #000;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);*/
+/*    overflow: hidden;*/
 /*}*/
 
-/*hr.hero-hr::before {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    top: -14px;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    background-image: url("/Img/Pacman copy.svg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center;*/
-/*    background-size: contain;*/
-/*    animation: move 10s infinite linear;*/
-/*    z-index: 1;*/
+/*.typewriter {*/
+/*    font-size: 10px;*/
+/*    font-family: "Press Start 2P", cursive;*/
+/*    animation: typing 3.5s steps(40) forwards, blink-caret .75s step-end infinite;*/
+/*    white-space: pre-wrap;*/
+/*    overflow: hidden;*/
+/*    border-right: 0.15em solid #000;*/
+/*    width: 0;*/
 /*}*/
 
-/*@keyframes move {*/
-/*    0% {*/
-/*        transform: translateX(0);*/
+/*@keyframes typing {*/
+/*    from {*/
+/*        width: 0;*/
 /*    }*/
-/*    100% {*/
-/*        transform: translateX(100%);*/
+/*    to {*/
+/*        width: 100%;*/
 /*    }*/
 /*}*/
-
-
-
-/*hr.hero-hr{*/
-/*    color: #ffffff;*/
-/*    background: #5d1717;*/
-/*    border: 1px solid #5d1717;*/
-/*    text-shadow: 0 0 5px #ffffff,*/
-/*    0 0 10px #ffffff,*/
-/*    0 0 20px #ffffff;*/
-/*    box-shadow: 0 0 50px #5d1717,*/
-/*    0 0 20px #5d1717,*/
-/*    0 0 5px #5d1717,*/
-/*    0 0 100px #5d1717;*/
-/*    font-size: 16px;*/
-/*    border-color: transparent;*/
-/*    border-radius: 25px;*/
-/*    border-width: thick;*/
-/*}*/
-img{
-}
-
 
