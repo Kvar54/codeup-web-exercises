@@ -272,6 +272,7 @@ return total/salesData.length;
 
     }
 
+
     // Write a function that takes a neighborhood object and determines if it is desirable. A neighborhood is desirable.
     // If the median home price is less than 300000, crime rates are low, and the total rating of schools is at least 24.
     // The function should return true if the neighborhood object is desireable and false otherwise.
@@ -394,6 +395,81 @@ fizzBuzz();
 
     */
  // returns 30
+
+    // You are given an array of runner objects, where each object represents a
+    // runner with properties name, age, and lapTimes (in seconds). Write a
+    // function called getTopRunners that takes the runners array as input and
+    // returns an array of top runners. A runner is considered top if their
+    // average lap time is 50 seconds or faster. If there are no top runners in
+    // the input array, the function should return an empty array
+
+
+    // HINT: You might want to create a function called calculateLapTimeAverage
+    // that takes in an array of numbers and returns the average
+
+    const runners = [
+        { name: "Alice", age: 25, lapTimes: [50.5, 45.2, 48.8, 47.1] },
+        { name: "Bob", age: 28, lapTimes: [55.2, 50.7, 53.3, 52.9] },
+        { name: "Charlie", age: 24, lapTimes: [48.9, 46.3, 50.1, 49.5] },
+        { name: "David", age: 27, lapTimes: [51.4, 50.2, 49.8, 52.3] },
+        { name: "Eve", age: 26, lapTimes: [47.7, 45.9, 46.6, 48.3] },
+    ];
+ function getTopRunners(runnersArray) {
+     // declare top runners array
+     let topRunners = [];
+
+
+     for (let runner of runnersArray) {
+         //     check if topm runner
+         //     if true, add to top runners
+         if (calculateLapTimeAverage(runner.lapTimes) <= 50/* the average <=50 */) {
+             //     if true, add to topRunners
+             topRunners.push(runner);
+         //     bonus:
+         //     topRunners.push({
+         //         name: runner.name,
+         //         age: runner.age
+         //     });
+         }
+         //     if not, do nothing
+     }
+     return topRunners;
+ }
+     // return topRunners
+     // if there are no top runners, this will be an empty array
+ function calculateLapTimeAverage (lapTimesArray){
+     let total = 0;
+     let count = 0;
+     // loop through array
+     for(let lapTime of lapTimesArray) {
+         total += lapTime;
+         count++;
+     }
+return total / count;
+ }
+
+    console.log(getTopRunners(runners));
+    // Input:
+
+    // Expected Output:
+    // [
+    //     { name: 'Alice', age: 25, lapTimes: [50.5, 45.2, 48.8, 47.1] },
+    //     { name: 'Charlie', age: 24, lapTimes: [48.9, 46.3, 50.1, 49.5] },
+    //     { name: 'Eve', age: 26, lapTimes: [47.7, 45.9, 46.6, 48.3] }
+    // ]
+
+
+
+// BONUS: Each runner in the resulting array should be represented as an
+// object containing only the name and age properties.
+
+
+// Expected Bonus Output:
+//         [
+//         { name: "Alice", age: 18 },
+//             { name: "Charlie", age: 19 },
+//             { name: "Eve", age: 17 }
+//         ]
 
 
 </script>
