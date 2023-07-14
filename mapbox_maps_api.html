@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MapBox Maps</title>
+    <script src="js/keys.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<style>
+    body{
+        background: #171B1C;
+    }
+    button.fav{
+        padding: 10px;
+        color:white;
+        background-color: #6C757D;
+        border-radius: 8px;
+        box-shadow: unset;
+    }
+    h1{
+        color:white;
+    }
+</style>
+<h1 class="row justify-content-center">Mapbox API</h1>
+<nav class="dropdown mt-2 mb-2 m-4">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Zoom Level    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" id="lvl5" >Zoom lvl: 5</a></li>
+        <li><a class="dropdown-item" id="lvl15" >Zoom lvl: 15</a></li>
+        <li><a class="dropdown-item" id="lvl20" >Zoom lvl: 20</a></li>
+    </ul>
+</nav>
+
+
+<div id="map" style="height:50rem; width:130rem"></div>
+
+<button class="fav mt-3 m-4" id="fav-btn">My Favorite Restaurants</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="js/mapbox_maps_api.js"></script>
+</body>
+</html>
