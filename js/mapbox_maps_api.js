@@ -24,7 +24,7 @@
             .setLngLat([-98.56643020002124, 29.44875300574096])
             .setHTML(`
                 <div>
-                    <h1>La Sorentina</h1>
+                    <h2>La Sorentina</h2>
                     <p>San Antonio's best Mom and Pops Italian Restaurant</p>
                 </div>
             `)

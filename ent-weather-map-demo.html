@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+
+<h1>Open Weather API Examples</h1>
+<p>See console...</p>
+<div id="result"></div>
+
+
+<!-- used to import minMaxTemps function -->
+<script src="js/min-max-temps.js"></script>
+
+<!-- include jQuery -->
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<!-- include API key file -->
+<script src="js/keys.js"></script>
+
+<!-- additional code here -->
+<script>
+    "use strict";
+
+    // Base URL for forecast API
+    const OPEN_WEATHER_URL = 'https://api.openweathermap.org/data/2.5/forecast';
+
+    // Simple way to create URL for request based on coordinates
+    function getWeatherURL(lat, lon) {
+        return `${OPEN_WEATHER_URL}?lat=${lat}&lon=${lon}&units=imperial&appid=${OPEN_WEATHER_APPID}`;
+    }
+
+    const ALAMO_COORDINATES = ['29.4260', '-98.4861'];
+
+    // TODO: log URL
+
+    // console.log(getWeatherURL(ALAMO_COORDINATES[0], ALAMO_COORDINATES[1]));
+
+    const URL = getWeatherURL(...ALAMO_COORDINATES);
+
+    // TODO: log full response from API
+// function maps () {
+//     $.ajax(URL).done(data => {
+//         console.log(data);
+//     }).fail(console.error);
+// }
+//
+//     const resultElement = document.querySelector("#result");            // TODO: Create an AJAX GET request for the file under data/inventory.json
+//             $.ajax(URL).done((maines) => {
+//                 console.log(maines);
+//                 resultElement.innerHTML = ""
+//                 for (let main of maines) {
+//                     let paragraph = document.createElement('p');
+//                     paragraph.innerHTML = `
+//                     <p>${main.title}</p>
+//                     <p>$main.quantity}</p>
+//                     <p>$${main.price}</p>
+//                     <p>${main.categories.join(", ")}</p>
+//                 `;
+//                     // add classes to target  and add inside the js tags and target classes
+//                     resultElement.appendChild(paragraph)
+//                 }
+//             })
+
+
+
+
+
+    // function convertToFahrenheit(temp) {
+    //     return ((temp - 32) * 5 / 9).toFixed(2);
+    // }
+
+    function displayData(data) {
+        const resultElement = document.querySelector("#result");
+        resultElement.innerHTML = "";
+
+        // Filter the data for a specific timeframe (e.g., 3 hours) within the 5-day forecast
+        const filteredData = data.list.filter(item => {
+            // Modify the condition as per your specific timeframe requirement
+            const timeFrame = item.dt_txt.split(" ")[1]; // Extract the time from the date-time string
+            return timeFrame === "03:00:00"; // Filter for items at 3:00:00
+        });
+
+        filteredData.forEach(item => {
+            const paragraph = document.createElement("p");
+            paragraph.textContent = `
+             ${item.dt_txt.split(" ")[0]},
+             ${item.main.temp_min}°F / ${item.main.temp_max}°F ,
+            Description ${item.weather[0].description},
+            Humidity: ${item.main.humidity},
+             Wind: ${item.wind.speed},
+            Pressure: ${item.main.pressure}
+             `;
+            resultElement.appendChild(paragraph);
+        });
+    }
+
+    function getData() {
+        $.ajax(URL)
+            .done(data => {
+                console.log(data);
+                displayData(data); // Calling the displayData function to append the data to the HTML
+            })
+            .fail(console.error);
+    }
+
+    getData();
+
+
+
+
+
+
+
+
+
+    // const dataArray = getArrayFromAPI();
+    //
+    // for (let i = 0; i < dataArray.length; i++) {
+    //     const item = dataArray[i];
+    //     const humidity = item.main.humidity;
+    //     const pressure = item.main.pressure;
+    //
+    //     console.log(humidity);
+    //     console.log(pressure);
+    // }
+
+
+
+
+
+
+
+    // TODO: log various parts of the API
+
+    // $.ajax(URL).done(data => {
+    //     console.log(data);
+    //     // TODO: log the city name
+    //     // TODO: log the first three-hour forecast block
+    //     // TODO: log the humidity for the first three-hour block
+    // }).fail(console.error);
+
+
+    // TODO: log the humidity for all days
+
+    // $.ajax(getWeatherURL(...ALAMO_COORDINATES))
+    //     .done((data) => {
+    //
+    //         data.list.forEach((day, index) => {
+    //             if (index % 8 === 0) {
+    //                 console.log(day.main.humidity);
+    //             }
+    //         });
+    //
+    //         // OR
+    //
+    //         for (let i = 0; i < data.list.length; i += 8) {
+    //             console.log(data.list[i].main.humidity);
+    //         }
+    //
+    //     })
+    //     .fail(console.error);
+
+
+    // TODO: log the min and max temp for each day
+
+    // $.ajax(getWeatherURL(...ALAMO_COORDINATES))
+    //     .done(data => {
+    //         console.log(data);
+    //         const minMaxTemps = returnMinMaxTemps(data);
+    //         minMaxTemps.forEach(minMaxTemp => {
+    //             console.log(minMaxTemp);
+    //         });
+    //     })
+    //     .fail(console.error);
+
+
+
+    // $.get("http://api.openweathermap.org/data/2.5/weather", {
+    //     APPID: OPEN_WEATHER_APPID,
+    //     lat:    29.423017,
+    //     lon:   -98.48527,
+    //     units: "imperial"
+    // }).done(function(data) {
+    //     console.log(data);
+    // });
+// function test(datasets) {
+//     console.log("Testing weather" + JSON.stringify(datasets));
+//     const test = JSON.parse(datasets);
+// console.log("Testing2: " + test.coord);
+//     }
+</script>
+</body>
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Open Weather Forecast API Example</title>-->
+<!--</head>-->
+
+</html>

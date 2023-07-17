@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Weather Forecast API Example</title>
+</head>
+<body>
+
+<h1>Open Weather API Examples</h1>
+<p>See console...</p>
+
+<!-- used to import minMaxTemps function -->
+<script src="js/min-max-temps.js"></script>
+
+<!-- include jQuery -->
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<!-- include API key file -->
+<script src="js/keys.js"></script>
+
+<!-- additional code here -->
+<script>
+    "use strict";
+
+
+    const OPEN_WEATHER_URL = 'https://api.openweathermap.org/data/2.5/forecast';
+    function getWeatherURL(lat, lon) {
+        return `${OPEN_WEATHER_URL}?lat=${lat}&lon=${lon}&units=imperial&appid=${OPEN_WEATHER_APPID}`;
+    }
+
+    // $.ajax("https://api.openweathermap.org/data/2.5/forecast").done((tools) => {
+    //     console.log(tools);
+    // });
+function create (tools) {
+
+// inside my function
+    for (let tool of tools) {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+                    <td>${tool.title}</td>
+                    <td>${tool.quantity}</td>
+                    <td>$${tool.price}</td>
+                    <td>${tool.categories.join(", ")}</td>
+                `;
+        // add classes to target  and add inside the js tags and target classes
+        tableBody.appendChild(row)
+    }
+}
+</script>
