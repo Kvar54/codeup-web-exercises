@@ -28,7 +28,7 @@ function displayData(data) {
         resultElement.appendChild(emptyDiv);
         console.log(data.city.name);
         emptyDiv.innerHTML = `
-<p class="city">${data.city.name},</p>
+<h1 class="city card">City: ${data.city.name}</h1>
                <p class="date"> ${item.dt_txt.split(" ")[0]},</p>
                <p class="temp"> ${item.main.temp_min}°F / ${item.main.temp_max}°F </p>
                <p class="description"> Description ${item.weather[0].description}, </p>

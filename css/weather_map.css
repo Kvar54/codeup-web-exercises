@@ -11,3 +11,15 @@ nav{
 }
 #result{
 }
+canvas.mapboxgl-canvas{
+    opacity:89%
+}
+.card{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left:15px;
+    margin-right:15px;
+    border-radius: 8px;
+}
+.card-city{
+    color:white;
+}
