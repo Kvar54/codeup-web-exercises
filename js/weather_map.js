@@ -94,6 +94,26 @@ function searchInput(map, searchBox) {
         })
     })
 }
+// Sound if we use it
+let currentlyPlayingSound = false
+document.querySelector('body').addEventListener('click', function(e){
+    if (!currentlyPlayingSound) {
+        currentlyPlayingSound = true;
+        let audioObject = new Audio('./audio/audio/onlymp3.to - season_of_the_witch__from_the_motion_picture__scary_stories_to_tell_in_the_dark____audio_-zA4OjrpVsiY-192k-1689779700.mp3').play();
+        audioObject.addEventListener("ended", function(){
+            currentlyPlayingSound = false;
+        });
+    }
+});
+
+///////////////////////////////////Code i tired but didn't have enough time////////////////////////////////////////////////
+// $("h1").click(function(){
+//     $("h1").hide();
+//     $('body').css("src", "../Img/rn.gif");
+//     $("body").css("background-image","url(../Img/wchfrst.webp)")
+//     $("#imgchrt").attr("src","display:none")
+//     $("#pg2").css({display:"block"})
+// });
 ///////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////

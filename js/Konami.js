@@ -47,6 +47,7 @@ $(() => {
         $("h1").hide();
         $('#jojoImage').attr("src", "../Img/wlkjoj.gif");
         $("body").css("background-image","url(../Img/bnb,nm.jpeg)")
+        $("#pg2").display("block");
     });
     // $('h1')
     //     .on("click",onClickChange)

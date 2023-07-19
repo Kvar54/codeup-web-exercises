@@ -1,5 +1,5 @@
 body{
-    background-image: url("/Img/Spvj0ol.jpg");
+    background-image: url("/Img/wchfrst.webp");
     background-size: cover;
     /*background-color:red;*/
 }
@@ -16,6 +16,7 @@ nav{
 }
 canvas.mapboxgl-canvas{
     opacity:89%;
+
     position:relative;
 }
 .card{
@@ -46,3 +47,24 @@ img.card-background {
     height: 47%;
     width: 63%;
 }
+
+a.nav-link{
+    text-decoration: none;
+    color: white;
+}
+/*.btn-outline-success:hover{*/
+
+/*}*/
+/*.url {*/
+/*    cursor: url(myBall.cur),auto;*/
+/*}*/
+
+
+/*}*/
+/*#map{*/
+/*    top:0;*/
+/*    right:0;*/
+/*    bottom:0;*/
+/*    left:0;*/
+/*    position:absolute;*/
+/*}*/
