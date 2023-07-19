@@ -59,7 +59,7 @@ function initializedMap() {
     const mapOptions = {
         container: "map",
         // accepts the id, but you don't need a hashtag because this only accepts the id
-        style: "mapbox://styles/mapbox/outdoors-v12",
+        style: "mapbox://styles/mapbox/navigation-night-v1",
         zoom: 8,
         center: [-95.712891, 37.09024]
     }

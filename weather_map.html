@@ -19,20 +19,43 @@
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
+<!-- Start of NavBar -->
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand">Navbar</a>
+        <a class="navbar-brand"> <img src="Img/tri-fotor-bg-remover-2023071911757.png" height="70" width="100"/>Witch 'N' Weather</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+        </div>
         <form class="d-flex" role="search">
             <input id="user-input" class="form-control me-2" type="search" placeholder="Enter Location" aria-label="Search">
             <button id="search" class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </div>
 </nav>
+<!-- End of NavBar -->
+<!-- Map -->
 <div class="container">
+    <img src="Img/dead-tree-branch-frame-border-png-clipart-free-907.png" class="card-background" alt="card background">
     <div class="row justify-center my-5" id="map" style="height:40vh; width:60vw">
 
     </div>
 </div>
+<!-- End of Map -->
+
+<!-- Start of Cards -->
 <div class="fluid-container">
     <div class="d-flex gap-5" id="result">
     </div>
