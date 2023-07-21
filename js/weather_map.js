@@ -32,7 +32,7 @@ function displayData(data) {
                <p class="date"> ${item.dt_txt.split(" ")[0]},</p>
                <p class="temp"> ${item.main.temp_min}°F / ${item.main.temp_max}°F </p>
                <p class="description"> Description ${item.weather[0].description}, </p>
-               <p class="icon"> <img src="http://openweathermap.org/img/w/${item.weather[0].icon}.png" alt=""></p>
+               <p class="icon"> <img src="http://openweathermap.org/img/w/${item.weather[0].icon}.png" alt="weather icon" height="70" width="70"></p>
                <p class="humidity"> Humidity: ${item.main.humidity},</p>
                 <p class="wind"> Wind: ${item.wind.speed},</p
                 <p class="feels-like-temp"> Feels like: ${item.main.feels_like}°F,</p>
